@@ -35,4 +35,8 @@ class BooksListStore extends MainStore<bool> {
       );
     });
   }
+
+  uploadBooks(List<BookEntity> list) {
+    eventBus?.fire(EventInfo(name: BooksModuleEvents.uploadBooks, data: list));
+  }
 }

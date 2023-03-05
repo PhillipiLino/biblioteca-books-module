@@ -67,6 +67,13 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                   color: Colors.white,
                 ),
               ),
+              IconButton(
+                onPressed: () => store.uploadBooks(widget.list),
+                icon: const Icon(
+                  Icons.cloud_upload_outlined,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),
