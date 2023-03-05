@@ -16,13 +16,14 @@ class HomeStore extends MainStore<List<BookEntity>> {
   HomeStore(
     this._routes,
     EventBus? eventBus,
-  ) : super(eventBus, []);
-
-  getBooks() async {
-    eventBus?.fire(const EventInfo(name: BooksModuleEvents.getBooks));
+  ) : super(eventBus, []) {
     eventBus?.on().listen((event) {
       if (event is EventInfo) _parseData(event);
     });
+  }
+
+  getBooks() async {
+    eventBus?.fire(const EventInfo(name: BooksModuleEvents.getBooks));
   }
 
   openDetails([BookEntity? book]) => _routes.openDetails(book);
@@ -33,6 +34,9 @@ class HomeStore extends MainStore<List<BookEntity>> {
         final books = (info.data as List<BookEntity>?) ?? [];
         isEmptyController.sink.add(books.isEmpty);
         update(books, force: true);
+        break;
+      case BooksModuleEvents.bookDeletedSuccess:
+        getBooks();
         break;
       default:
     }

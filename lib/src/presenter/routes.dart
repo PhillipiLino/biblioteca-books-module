@@ -1,3 +1,3 @@
 class Routes {
-  static const detailsRoute = '/detailsRoute';
+  static const detailsRoute = '/details';
 }

@@ -21,16 +21,6 @@ class HomeBookItem extends StatelessWidget {
       stars.add(Star(i <= book.stars));
     }
 
-    final bookImageWidget = Container(
-      height: 130,
-      width: 90,
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadiusDirectional.circular(10),
-      ),
-      child: BookImage(book.imagePath ?? ''),
-    );
-
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -48,19 +38,7 @@ class HomeBookItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Hero(
-                  tag: 'avatar-${book.id}',
-                  child: BookImage(book.imagePath ?? ''),
-                  flightShuttleBuilder: (
-                    flightContext,
-                    animation,
-                    flightDirection,
-                    fromHeroContext,
-                    toHeroContext,
-                  ) {
-                    return Center(child: bookImageWidget);
-                  },
-                ),
+                child: BookImage(book.imagePath ?? ''),
               ),
               const SizedBox(width: 10),
               Expanded(

@@ -4,4 +4,5 @@ class BooksModuleEvents {
   static const saveBook = 'save_book';
   static const bookSavedSuccess = 'success_save_book';
   static const deleteBook = 'delete_book';
+  static const bookDeletedSuccess = 'success_delete_book';
 }
