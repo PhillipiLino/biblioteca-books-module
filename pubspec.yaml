@@ -2,6 +2,7 @@ name: biblioteca_books_module
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: 'none'
 
 environment:
   sdk: '>=2.19.3 <3.0.0'
@@ -10,6 +11,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  clean_architecture_utils:
+    git:
+      url: https://github.com/PhillipiLino/flutter-clean-architecture-utils.git
+      ref: main
+
+  commons_tools_sdk:
+    git:
+      url: https://github.com/PhillipiLino/flutter-commons-tools-sdk
+      ref: main
 
 dev_dependencies:
   flutter_test:
