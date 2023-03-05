@@ -7,6 +7,7 @@ import 'package:example/app_widget_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'event_controller.dart';
+import 'persist_list_helper.dart';
 import 'trackers.dart';
 
 class AppModule extends Module {
@@ -15,7 +16,9 @@ class AppModule extends Module {
     Bind<AppWidgetStore>((i) => AppWidgetStore()),
     Bind.singleton<EventBus>((i) => EventBus()),
     Bind<Trackers>((i) => Trackers()),
+    Bind((i) => PersistListHelper()),
     Bind.singleton<EventController>((i) => EventController(
+          i.get(),
           i.get(),
           i.get(),
         )),

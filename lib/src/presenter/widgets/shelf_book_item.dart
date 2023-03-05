@@ -51,17 +51,21 @@ class ShelfBookItem extends StatelessWidget {
             ),
             if (onTapDelete != null)
               Positioned(
-                right: 8,
-                top: 4,
-                child: FloatingActionButton(
-                  onPressed: () {
-                    onTapDelete?.call(book);
-                  },
-                  mini: true,
-                  backgroundColor: Colors.amber,
-                  child: const Icon(
-                    Icons.delete,
-                    color: Colors.black,
+                right: 12,
+                top: 8,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.amber,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.delete,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      onTapDelete?.call(book);
+                    },
                   ),
                 ),
               ),

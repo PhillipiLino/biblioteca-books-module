@@ -33,7 +33,7 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
 
   _openDetails([BookEntity? book]) {
     store.openDetails(book).then((value) {
-      if ((value as bool? ?? false)) _refresh();
+      _refresh();
     });
   }
 
@@ -130,7 +130,7 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
     final accentColor = Theme.of(context).colorScheme.secondary;
 
     return Scaffold(
-      appBar: CustomAppBar(title: localization.homeTitle),
+      appBar: CustomAppBar(title: localization.homeTitle, pageContext: context),
       extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: false,
       body: GestureDetector(

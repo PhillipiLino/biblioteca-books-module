@@ -2,7 +2,6 @@ import 'package:biblioteca_books_module/src/presenter/widgets/books_list/books_l
 import 'package:biblioteca_components/biblioteca_components.dart';
 import 'package:clean_architecture_utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../domain/entities/book_entity.dart';
 import '../../localizations/module_localization.dart';
@@ -80,12 +79,14 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
               maintainState: true,
               child: Column(
                 children: [
-                  Text(
-                    widget.list[currentPage].name,
-                    style: GoogleFonts.lato(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      widget.list[currentPage].name,
+                      textAlign: TextAlign.center,
+                      style: MainTextStyles.bodyLargeBold.copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 16),

@@ -32,7 +32,7 @@ class HomeStore extends MainStore<List<BookEntity>> {
       case BooksModuleEvents.updateHomeBooks:
         final books = (info.data as List<BookEntity>?) ?? [];
         isEmptyController.sink.add(books.isEmpty);
-        update(books);
+        update(books, force: true);
         break;
       default:
     }

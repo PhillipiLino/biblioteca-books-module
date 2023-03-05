@@ -1,5 +1,7 @@
 PODS:
   - Flutter (1.0.0)
+  - image_picker_ios (0.0.1):
+    - Flutter
   - LaunchDarkly (6.1.0):
     - LaunchDarkly/Core (= 6.1.0)
   - LaunchDarkly/Core (6.1.0):
@@ -23,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - launchdarkly_flutter_client_sdk (from `.symlinks/plugins/launchdarkly_flutter_client_sdk/ios`)
   - mixpanel_flutter (from `.symlinks/plugins/mixpanel_flutter/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
@@ -37,6 +40,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  image_picker_ios:
+    :path: ".symlinks/plugins/image_picker_ios/ios"
   launchdarkly_flutter_client_sdk:
     :path: ".symlinks/plugins/launchdarkly_flutter_client_sdk/ios"
   mixpanel_flutter:
@@ -48,6 +53,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
   LaunchDarkly: 44e1728319bd7693a2a619561a8237187406b920
   launchdarkly_flutter_client_sdk: 7e3a96fc687464a76492a1d681c8c109d89c3161
   LDSwiftEventSource: 1ac1b0986a07c5fe4f2c94d87f1d41f4de6ae727

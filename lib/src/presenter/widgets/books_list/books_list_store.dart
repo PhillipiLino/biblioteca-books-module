@@ -1,9 +1,8 @@
+import 'package:biblioteca_books_module/biblioteca_books_module.dart';
 import 'package:clean_architecture_utils/events.dart';
 import 'package:clean_architecture_utils/utils.dart';
 import 'package:commons_tools_sdk/commons_tools_sdk.dart';
 import 'package:flutter/material.dart';
-
-import '../../../domain/entities/book_entity.dart';
 
 class BooksListStore extends MainStore<bool> {
   final _debouncer = Debouncer(milliseconds: 800);
@@ -13,7 +12,7 @@ class BooksListStore extends MainStore<bool> {
   BooksListStore(EventBus? eventBus) : super(eventBus, true);
 
   deleteBook(BookEntity book) async {
-    // executeEither(() => DartzEitherAdapter.adapter(usecase(book)));
+    eventBus?.fire(EventInfo(name: BooksModuleEvents.deleteBook, data: book));
   }
 
   searchBookInList(String text, List<BookEntity> list, int currentPage) {
