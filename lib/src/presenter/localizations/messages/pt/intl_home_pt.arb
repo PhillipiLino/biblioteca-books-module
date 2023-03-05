@@ -7,6 +7,6 @@
     "homeEmptyListMessage": "Adicione já os livros que você está lendo, ou que vai começar a ler, para ter um acompanhamento do seu desempenho na leitura!",
     "homeEmptyListButton": "Adicionar",
     "homeSearchBarHint": "Digite um livro ou autor",
-    "homeProgressTitle": "Meu Progresso",
+    "homeProgressTitle": "Meu progresso",
     "homeProgressMessage": "{read} de {total} páginas lidas"
 }

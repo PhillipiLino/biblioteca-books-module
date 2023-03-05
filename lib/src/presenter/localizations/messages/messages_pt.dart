@@ -28,11 +28,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "deleteDialogNegativeButton" : MessageLookupByLibrary.simpleMessage("Não"),
     "deleteDialogPositiveButton" : MessageLookupByLibrary.simpleMessage("Sim"),
     "deleteDialogTitle" : MessageLookupByLibrary.simpleMessage("Excluir livro?"),
+    "detailsPageFieldAuthorHint" : MessageLookupByLibrary.simpleMessage("Autor"),
+    "detailsPageFieldNameHint" : MessageLookupByLibrary.simpleMessage("Nome do livro"),
+    "detailsPageFieldPagesHint" : MessageLookupByLibrary.simpleMessage("Total de páginas"),
+    "detailsPageFieldReadPagesHint" : MessageLookupByLibrary.simpleMessage("Páginas lidas:"),
+    "detailsPageSaveButton" : MessageLookupByLibrary.simpleMessage("Salvar"),
+    "detailsPageTitle" : MessageLookupByLibrary.simpleMessage("Detalhes do Livro"),
     "homeEmptyListButton" : MessageLookupByLibrary.simpleMessage("Adicionar"),
     "homeEmptyListMessage" : MessageLookupByLibrary.simpleMessage("Adicione já os livros que você está lendo, ou que vai começar a ler, para ter um acompanhamento do seu desempenho na leitura!"),
     "homeEmptyListTitle" : MessageLookupByLibrary.simpleMessage("Nenhum livro encontrado"),
     "homeProgressMessage" : m0,
-    "homeProgressTitle" : MessageLookupByLibrary.simpleMessage("Meu Progresso"),
+    "homeProgressTitle" : MessageLookupByLibrary.simpleMessage("Meu progresso"),
     "homeSearchBarHint" : MessageLookupByLibrary.simpleMessage("Digite um livro ou autor"),
     "homeTitle" : MessageLookupByLibrary.simpleMessage("Minha estante")
   };

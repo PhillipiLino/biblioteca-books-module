@@ -1,0 +1,9 @@
+{
+    "@@last_modified": "2018-05-25T11:50:40.743319",
+    "@@locale": "en",
+    
+    "deleteDialogTitle": "Delete book?",
+    "deleteDialogMessage": "Do you really want to delete this book from your library?",
+    "deleteDialogNegativeButton": "No",
+    "deleteDialogPositiveButton": "Yes"
+}

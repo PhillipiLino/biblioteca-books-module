@@ -24,7 +24,8 @@ class ModuleLocalizations {
   }
 
   final home = _HomePage();
-  final deleteBookDilaog = _DeleteBookDialog();
+  final deleteBookDilog = _DeleteBookDialog();
+  final details = _DetailsPage();
 }
 
 class _HomePage {
@@ -48,4 +49,18 @@ class _DeleteBookDialog {
       Intl.message('', name: 'deleteDialogNegativeButton');
   String get deleteDialogPositiveButton =>
       Intl.message('', name: 'deleteDialogPositiveButton');
+}
+
+class _DetailsPage {
+  String get detailsPageTitle => Intl.message('', name: 'detailsPageTitle');
+  String get detailsPageFieldNameHint =>
+      Intl.message('', name: 'detailsPageFieldNameHint');
+  String get detailsPageFieldAuthorHint =>
+      Intl.message('', name: 'detailsPageFieldAuthorHint');
+  String get detailsPageFieldPagesHint =>
+      Intl.message('', name: 'detailsPageFieldPagesHint');
+  String get detailsPageFieldReadPagesHint =>
+      Intl.message('', name: 'detailsPageFieldReadPagesHint');
+  String get detailsPageSaveButton =>
+      Intl.message('', name: 'detailsPageSaveButton');
 }

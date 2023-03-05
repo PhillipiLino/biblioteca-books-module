@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:biblioteca_books_module/src/presenter/localizations/module_localization.dart';
 import 'package:biblioteca_components/biblioteca_components.dart';
 import 'package:clean_architecture_utils/utils.dart';
+import 'package:commons_tools_sdk/input_formatters.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -21,6 +23,7 @@ class DetailsPage extends StatefulWidget {
 }
 
 class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
+  final localization = ModuleLocalizations().details;
   late BookEntity? book;
   int starsNumber = 1;
 
@@ -75,7 +78,7 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
 
     return Scaffold(
         appBar: CustomAppBar(
-          title: 'Detalhes do Livro',
+          title: localization.detailsPageTitle,
           fromBottom: true,
           pageContext: context,
         ),
@@ -145,7 +148,7 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                               child: RatingBar(starsNumber, changeRating),
                             ),
                             DefaultTextField(
-                              hint: 'Nome do livro',
+                              hint: localization.detailsPageFieldNameHint,
                               controller: store.nameController,
                               onChanged: store.onChangeField,
                               textCapitalization: TextCapitalization.words,
@@ -153,7 +156,7 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                             ),
                             Container(height: 12),
                             DefaultTextField(
-                              hint: 'Autor',
+                              hint: localization.detailsPageFieldAuthorHint,
                               controller: store.authorController,
                               onChanged: store.onChangeField,
                               textCapitalization: TextCapitalization.words,
@@ -161,11 +164,12 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                             ),
                             Container(height: 12),
                             DefaultTextField(
-                              hint: 'Total de páginas',
+                              hint: localization.detailsPageFieldPagesHint,
                               controller: store.pagesController,
                               keyboardType: TextInputType.number,
                               onChanged: store.onChangeField,
                               textInputAction: TextInputAction.next,
+                              inputFormatters: [NumberInputFormatter()],
                             ),
                             Container(height: 20),
                             Row(
@@ -177,7 +181,8 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Páginas lidas: ',
+                                        localization
+                                            .detailsPageFieldReadPagesHint,
                                         style: MainTextStyles.bodyMediumBold
                                             .copyWith(
                                           color: Colors.white,
@@ -211,6 +216,9 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                                                     TextInputType.number,
                                                 controller:
                                                     store.readPagesController,
+                                                inputFormatters: [
+                                                  NumberInputFormatter()
+                                                ],
                                               ),
                                             ),
                                             Container(width: 4),
@@ -243,7 +251,8 @@ class DetailsPageState extends MainPageState<DetailsPage, DetailsStore> {
                                       child:
                                           trackersHelper.trackedPrimaryButton(
                                         btnId: 'btn_save_book',
-                                        btnTitle: 'Salvar',
+                                        btnTitle:
+                                            localization.detailsPageSaveButton,
                                         onPress: snapshot.data ?? false
                                             ? () {
                                                 store.insertBook(

@@ -38,7 +38,7 @@ class DeleteBookDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = ModuleLocalizations().deleteBookDilaog;
+    final localization = ModuleLocalizations().deleteBookDilog;
 
     return AlertDialog(
       title: Text(localization.deleteDialogTitle),

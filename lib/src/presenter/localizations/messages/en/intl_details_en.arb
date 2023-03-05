@@ -1,0 +1,11 @@
+{
+    "@@last_modified": "2018-05-25T11:50:40.743319",
+    "@@locale": "en",
+    
+    "detailsPageTitle": "Book Details",
+    "detailsPageFieldNameHint": "Book name",
+    "detailsPageFieldAuthorHint": "Author",
+    "detailsPageFieldPagesHint": "Total pages",
+    "detailsPageFieldReadPagesHint": "Pages read:",
+    "detailsPageSaveButton": "Save"
+}

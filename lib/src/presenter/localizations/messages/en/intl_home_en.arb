@@ -2,7 +2,11 @@
     "@@last_modified": "2018-05-25T11:50:40.743319",
     "@@locale": "en",
     
-    "booksTab": "My Books",
-    "searchTab": "Search",
-    "profileTab": "Profile"
+    "homeTitle": "My bookshelf",
+    "homeEmptyListTitle": "No books found",
+    "homeEmptyListMessage": "Add the books you are reading now, or that you are about to start reading, to keep track of your reading performance!",
+    "homeEmptyListButton": "Add",
+    "homeSearchBarHint": "Enter a book or author",
+    "homeProgressTitle": "My progress",
+    "homeProgressMessage": "{read} of {total} pages read"
 }
