@@ -58,6 +58,7 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
 
     if (books.isEmpty) {
       return EmptyList(
+        textColor: Colors.white,
         image: const Image(image: MainIllustrations.emptyLibrary),
         title: localization.homeEmptyListTitle,
         message: localization.homeEmptyListMessage,
@@ -130,7 +131,6 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
     final accentColor = Theme.of(context).colorScheme.secondary;
 
     return Scaffold(
-      appBar: CustomAppBar(title: localization.homeTitle, pageContext: context),
       extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: false,
       body: GestureDetector(
@@ -148,6 +148,10 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
                   bottomLeft: Radius.circular(300),
                   bottomRight: Radius.circular(300),
                 ),
+              ),
+              child: CustomAppBar(
+                title: localization.homeTitle,
+                pageContext: context,
               ),
             ),
             const SizedBox(height: 20),

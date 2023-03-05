@@ -29,7 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "deleteDialogPositiveButton" : MessageLookupByLibrary.simpleMessage("Sim"),
     "deleteDialogTitle" : MessageLookupByLibrary.simpleMessage("Excluir livro?"),
     "homeEmptyListButton" : MessageLookupByLibrary.simpleMessage("Adicionar"),
-    "homeEmptyListMessage" : MessageLookupByLibrary.simpleMessage("Adicione já seus os livros que você está lendo ou que vai começar a ler para ter um acompanhamento do seu desenpenho na leitura!"),
+    "homeEmptyListMessage" : MessageLookupByLibrary.simpleMessage("Adicione já os livros que você está lendo, ou que vai começar a ler, para ter um acompanhamento do seu desempenho na leitura!"),
     "homeEmptyListTitle" : MessageLookupByLibrary.simpleMessage("Nenhum livro encontrado"),
     "homeProgressMessage" : m0,
     "homeProgressTitle" : MessageLookupByLibrary.simpleMessage("Meu Progresso"),
