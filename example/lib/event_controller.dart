@@ -1,3 +1,4 @@
+import 'package:biblioteca_books_module/biblioteca_books_module.dart';
 import 'package:clean_architecture_utils/events.dart';
 
 import 'app_widget_store.dart';
@@ -25,6 +26,27 @@ class EventController {
         break;
       case DefaultEvents.hideAppLoaderEvent:
         _appWidgetStore?.hideLoaderApp();
+        break;
+      case BooksModuleEvents.getBooks:
+        _eventBus
+            .fire(EventInfo(name: BooksModuleEvents.updateHomeBooks, data: [
+          BookEntity(
+            id: 0,
+            name: 'name',
+            author: 'author',
+            pages: 100,
+            readPages: 10,
+            stars: 5,
+          ),
+          BookEntity(
+            id: 1,
+            name: 'name',
+            author: 'author',
+            pages: 100,
+            readPages: 10,
+            stars: 5,
+          ),
+        ]));
         break;
       default:
     }

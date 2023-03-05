@@ -1,0 +1,9 @@
+{
+    "@@last_modified": "2018-05-25T11:50:40.743319",
+    "@@locale": "pt",
+    
+    "deleteDialogTitle": "Excluir livro?",
+    "deleteDialogMessage": "Você deseja realmente excluir esse livro da sua biblioteca?",
+    "deleteDialogNegativeButton": "Não",
+    "deleteDialogPositiveButton": "Sim"
+}

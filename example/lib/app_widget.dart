@@ -1,3 +1,4 @@
+import 'package:biblioteca_books_module/biblioteca_books_module.dart';
 import 'package:clean_architecture_utils/localizations.dart';
 import 'package:clean_architecture_utils/modular.dart';
 import 'package:example/app_widget_store.dart';
@@ -35,16 +36,23 @@ class AppWidgetState extends State<AppWidget> with TickerProviderStateMixin {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
     return MaterialApp.router(
-      title: 'Simulação de Precificação dinâmica',
       scaffoldMessengerKey: key,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       localizationsDelegates: const [
+        BooksModuleLocalizationsDelegate(),
         ArchitectureLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 36, 38, 39),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.amber,
+          accentColor: const Color.fromARGB(255, 96, 96, 96),
+        ),
+      ),
       supportedLocales: const [Locale('pt')],
       builder: (context, child) => Scaffold(
         resizeToAvoidBottomInset: false,

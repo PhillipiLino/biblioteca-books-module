@@ -1,0 +1,12 @@
+{
+    "@@last_modified": "2018-05-25T11:50:40.743319",
+    "@@locale": "pt",
+    
+    "homeTitle": "Minha estante",
+    "homeEmptyListTitle": "Nenhum livro encontrado",
+    "homeEmptyListMessage": "Adicione já seus os livros que você está lendo ou que vai começar a ler para ter um acompanhamento do seu desenpenho na leitura!",
+    "homeEmptyListButton": "Adicionar",
+    "homeSearchBarHint": "Digite um livro ou autor",
+    "homeProgressTitle": "Meu Progresso",
+    "homeProgressMessage": "{read} de {total} páginas lidas"
+}

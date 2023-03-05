@@ -1,0 +1,4 @@
+flutter pub run intl_generator:generate_from_arb --output-dir=lib/src/presenter/localizations/messages --no-use-deferred-loading lib/src/presenter/localizations/module_localization.dart lib/src/presenter/localizations/messages/en/intl_*.arb lib/src/presenter/localizations/messages/pt/intl_*.arb;
+sed -i '' '1,1s/^/\/\/ coverage:ignore-file\n/' lib/src/presenter/localizations/messages/messages_all.dart
+sed -i '' '1,1s/^/\/\/ coverage:ignore-file\n/' lib/src/presenter/localizations/messages/messages_en.dart
+sed -i '' '1,1s/^/\/\/ coverage:ignore-file\n/' lib/src/presenter/localizations/messages/messages_pt.dart
