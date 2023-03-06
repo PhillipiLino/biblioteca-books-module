@@ -1,3 +1,4 @@
+import 'package:biblioteca_books_module/src/presenter/keys.dart';
 import 'package:biblioteca_books_module/src/presenter/widgets/books_list/books_list_store.dart';
 import 'package:biblioteca_components/biblioteca_components.dart';
 import 'package:clean_architecture_utils/utils.dart';
@@ -54,6 +55,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
             children: [
               Expanded(
                 child: SearchBar(
+                  key: const Key(BooksKeys.txtHomeSearchBar),
                   hint: localization.homeSearchBarHint,
                   onChanged: (text) {
                     store.searchBookInList(text, widget.list, currentPage);
@@ -61,6 +63,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                 ),
               ),
               IconButton(
+                key: const Key(BooksKeys.btnChangeBooksVisibility),
                 onPressed: () => setState(() => showList = !showList),
                 icon: Icon(
                   showList ? Icons.list : Icons.book,
@@ -68,6 +71,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                 ),
               ),
               IconButton(
+                key: const Key(BooksKeys.btnUploadBooks),
                 onPressed: () => store.uploadBooks(widget.list),
                 icon: const Icon(
                   Icons.cloud_upload_outlined,
@@ -102,6 +106,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                       children: [
                         const SizedBox(height: 16),
                         PageView.builder(
+                          key: const Key(BooksKeys.pageViewBooks),
                           itemCount: widget.list.length,
                           controller: store.pageController,
                           onPageChanged: (value) {
@@ -110,6 +115,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                           itemBuilder: (context, index) {
                             return ShelfBookItem(
                               widget.list[index],
+                              key: Key(BooksKeys.shelfBook(index)),
                               onTap: widget.onTapItem,
                               isFirstBook: index == 0,
                               onTapDelete: (item) async {
@@ -128,6 +134,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
               visible: showList,
               maintainState: true,
               child: ListView.builder(
+                key: const Key(BooksKeys.listViewBooks),
                 controller: store.scrollController,
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 physics: const AlwaysScrollableScrollPhysics(
@@ -164,6 +171,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                     color: Theme.of(context).scaffoldBackgroundColor,
                   ),
                   child: HomeBookItem(
+                    key: Key(BooksKeys.shelfBook(position)),
                     widget.list[position],
                     onTap: () => widget.onTapItem(widget.list[position]),
                   ),

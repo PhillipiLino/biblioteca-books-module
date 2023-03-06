@@ -2,7 +2,6 @@ import 'package:biblioteca_components/biblioteca_components.dart';
 import 'package:clean_architecture_utils/utils.dart';
 import 'package:commons_tools_sdk/commons_tools_sdk.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../domain/entities/book_entity.dart';
 import '../keys.dart';
@@ -84,12 +83,9 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
                     width: double.maxFinite,
                     child: Text(
                       localization.homeProgressTitle,
-                      style: GoogleFonts.lato(
-                          textStyle: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
+                      style: MainTextStyles.bodyLargeBold.copyWith(
                         color: Colors.white,
-                      )),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -101,11 +97,9 @@ class _HomePageState extends MainPageState<HomePage, HomeStore> {
                     width: double.maxFinite,
                     child: Text(
                       localization.homeProgressMessage(readPages, totalPages),
-                      style: GoogleFonts.lato(
-                          textStyle: const TextStyle(
-                        fontSize: 12,
+                      style: MainTextStyles.bodyLargeBold.copyWith(
                         color: Colors.white,
-                      )),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 12),
