@@ -19,9 +19,11 @@ packages:
   biblioteca_components:
     dependency: transitive
     description:
-      path: "../../biblioteca_components"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: f1798457ea0a146d28f83ebc5e0b29407cfa7c93
+      url: "https://github.com/PhillipiLino/biblioteca-components.git"
+    source: git
     version: "0.0.1"
   boolean_selector:
     dependency: transitive

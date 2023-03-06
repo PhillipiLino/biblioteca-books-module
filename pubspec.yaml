@@ -1,7 +1,7 @@
 name: biblioteca_books_module
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/PhillipiLino/biblioteca-books-module.git
 publish_to: 'none'
 
 environment:
@@ -18,7 +18,9 @@ dependencies:
   image_picker: ^0.8.4+2
   path_provider: ^2.0.5
   biblioteca_components:
-    path: ../biblioteca_components
+    git:
+      url: https://github.com/PhillipiLino/biblioteca-components.git
+      ref: main
 
   clean_architecture_utils:
     git:
