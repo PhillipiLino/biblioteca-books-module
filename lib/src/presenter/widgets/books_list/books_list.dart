@@ -1,6 +1,6 @@
 import 'package:biblioteca_books_module/src/presenter/keys.dart';
 import 'package:biblioteca_books_module/src/presenter/widgets/books_list/books_list_store.dart';
-import 'package:biblioteca_components/biblioteca_components.dart';
+import 'package:biblioteca_components/biblioteca_components.dart' as components;
 import 'package:clean_architecture_utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +54,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
           child: Row(
             children: [
               Expanded(
-                child: SearchBar(
+                child: components.SearchBar(
                   key: const Key(BooksKeys.txtHomeSearchBar),
                   hint: localization.homeSearchBarHint,
                   onChanged: (text) {
@@ -95,7 +95,7 @@ class _BooksListState extends MainPageState<BooksList, BooksListStore> {
                     child: Text(
                       widget.list[currentPage].name,
                       textAlign: TextAlign.center,
-                      style: MainTextStyles.bodyLargeBold.copyWith(
+                      style: components.MainTextStyles.bodyLargeBold.copyWith(
                         color: Colors.white,
                       ),
                     ),
